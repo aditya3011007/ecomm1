@@ -30,7 +30,7 @@ router.put('/:id', verifyTokenAndAuthorize, async (req, res) => {
   }
 });
 
-//delete
+
 router.delete('/:id', verifyTokenAndAuthorize, async (req, res) => {
   try {
     await User.findByIdAndDelete(req.params.id);
@@ -40,7 +40,7 @@ router.delete('/:id', verifyTokenAndAuthorize, async (req, res) => {
   }
 });
 
-//get
+
 router.get('/find/:id', verifyTokenAndAdmin, async (req, res) => {
   try {
     const user = await User.findById(req.params.id);
@@ -51,7 +51,6 @@ router.get('/find/:id', verifyTokenAndAdmin, async (req, res) => {
   }
 });
 
-//get all users
 router.get('/', verifyTokenAndAdmin, async (req, res) => {
   const query = req.query.new;
   try {
@@ -65,7 +64,6 @@ router.get('/', verifyTokenAndAdmin, async (req, res) => {
   }
 });
 
-//user stats
 router.get('/stats', verifyTokenAndAdmin, async (req, res) => {
   const date = new Date();
   const lastYear = new Date(date.setFullYear(date.getFullYear() - 1));
