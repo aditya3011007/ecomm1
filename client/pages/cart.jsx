@@ -102,12 +102,8 @@ const Cart = () => {
             EMPTY CART
           </button>
         </div>
-
-        {/* bottom */}
         <div className="flex justify-between flex-col sm:flex-row ">
-          {/* info */}
           <div className="flex-[3] ">
-            {/* product details */}
             {cart.products.map((product) => (
               <div
                 key={product._id}
@@ -142,7 +138,6 @@ const Cart = () => {
                   </div>
                 </div>
 
-                {/* amt */}
                 <div className="flex-1 flex items-center justify-center flex-col">
                   {/* amt container */}
                   <div className="flex items-center mb-[20px] ">
@@ -166,7 +161,6 @@ const Cart = () => {
             <hr className="bg-[#eee] h-[1px] " />
           </div>
 
-          {/* summary */}
           <div className="flex-1 w-full border rounded-[10px] p-[20px] self-start md:h-[50vh] ">
             <h1 className="font-extralight text-2xl ">ORDER SUMMARY</h1>
             <div className="my-[30px] flex justify-between ">
