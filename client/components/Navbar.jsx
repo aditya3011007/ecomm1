@@ -34,7 +34,7 @@ const Navbar = () => {
         <div className="flex-1 text-center">
           <Link href="/">
             <h1 className="font-bold text-[24px] sm:text-3xl cursor-pointer ">
-              LAMA.
+              VITZOR
             </h1>
           </Link>
         </div>
