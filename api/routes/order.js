@@ -9,7 +9,7 @@ const {
 
 const router = express.Router();
 
-//create
+
 router.post('/', verifyAuth, async (req, res) => {
   const newOrder = new Order(req.body);
 
@@ -22,7 +22,7 @@ router.post('/', verifyAuth, async (req, res) => {
   }
 });
 
-//update
+
 router.put('/:id', verifyTokenAndAdmin, async (req, res) => {
   try {
     const updatedOrder = await Order.findByIdAndUpdate(
@@ -38,7 +38,7 @@ router.put('/:id', verifyTokenAndAdmin, async (req, res) => {
   }
 });
 
-//delete
+
 router.delete('/:id', verifyTokenAndAdmin, async (req, res) => {
   try {
     await Order.findByIdAndDelete(req.params.id);
@@ -48,7 +48,7 @@ router.delete('/:id', verifyTokenAndAdmin, async (req, res) => {
   }
 });
 
-//get
+
 router.get('/find/:userId', verifyTokenAndAuthorize, async (req, res) => {
   try {
     const orders = await Order.find({ userId: req.params.userId });
@@ -58,7 +58,6 @@ router.get('/find/:userId', verifyTokenAndAuthorize, async (req, res) => {
   }
 });
 
-// get all
 router.get('/', verifyTokenAndAdmin, async (req, res) => {
   try {
     const orders = await Orders.find();
@@ -68,7 +67,7 @@ router.get('/', verifyTokenAndAdmin, async (req, res) => {
   }
 });
 
-//order stats
+
 router.get('/income', verifyTokenAndAdmin, async (req, res) => {
   const productId = req.query.productId;
   const date = new Date();
