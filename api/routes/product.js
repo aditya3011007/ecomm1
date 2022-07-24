@@ -8,7 +8,7 @@ const {
 
 const router = express.Router();
 
-//create
+
 router.post('/', verifyTokenAndAdmin, async (req, res) => {
   const newProduct = new Product(req.body);
 
@@ -21,7 +21,7 @@ router.post('/', verifyTokenAndAdmin, async (req, res) => {
   }
 });
 
-//update
+
 router.put('/:id', verifyTokenAndAdmin, async (req, res) => {
   try {
     const updatedProduct = await Product.findByIdAndUpdate(
@@ -37,7 +37,7 @@ router.put('/:id', verifyTokenAndAdmin, async (req, res) => {
   }
 });
 
-//delete
+
 router.delete('/:id', verifyTokenAndAdmin, async (req, res) => {
   try {
     await Product.findByIdAndDelete(req.params.id);
@@ -47,7 +47,6 @@ router.delete('/:id', verifyTokenAndAdmin, async (req, res) => {
   }
 });
 
-//get
 router.get('/find/:id', async (req, res) => {
   try {
     const product = await Product.findById(req.params.id);
@@ -57,7 +56,7 @@ router.get('/find/:id', async (req, res) => {
   }
 });
 
-//get all products
+
 router.get('/', async (req, res) => {
   const { new: qNew, category } = req.query;
   try {
