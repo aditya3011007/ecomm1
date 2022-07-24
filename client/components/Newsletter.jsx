@@ -35,15 +35,12 @@ const Newsletter = () => {
 
   return (
     <div className="h-[60vh] bg-[#fcf5f5] flex items-center justify-center flex-col ">
-      {/* title */}
       <h1 className="font-semibold text-[70px] mb-[20px] ">Newsletter</h1>
 
-      {/* desc */}
+
       <p className="text-[24px] font-light mb-[20px] text-center ">
         Get timely updates from your favorite products.
       </p>
-
-      {/* info container */}
       <form
         className="w-[80%] sm:w-1/2 h-[40px] bg-white flex justify-between border "
         ref={formRef}
