@@ -9,8 +9,6 @@ const CategoryItem = ({ item }) => {
           <div className="relative w-full h-[30vh] sm:h-full border ">
             <Image src={item.img} layout="fill" objectFit="cover" />
           </div>
-
-          {/* info */}
           <div className="absolute h-full w-full top-0 left-0 flex items-center justify-center flex-col ">
             <h1 className="font-semibold text-white mb-[20px] text-xl ">
               {item.title}
