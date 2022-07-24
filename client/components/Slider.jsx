@@ -20,7 +20,6 @@ const Slider = () => {
 
   return (
     <div className="w-full h-screen sm:flex relative overflow-hidden hidden ">
-      {/* arrow */}
       <div
         onClick={() => handleClick('left')}
         className="w-[50px] h-[50px] bg-gray-100 rounded-full flex items-center justify-center
@@ -28,12 +27,12 @@ const Slider = () => {
       >
         <ArrowLeftOutlined />
       </div>
-      {/* wrapper */}
+
       <div
         style={{ transform: `translateX(${slideIndex * -100}vw)` }}
         className="h-full flex transition duration-[1.5s] "
       >
-        {/* slides */}
+
         {sliderItems.map((i) => (
           <div
             key={i.id}
